@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(86, 245, 171);
+    width: 100%;
+    padding: 1rem 2rem;
+    align-items: center;
+    gap: 1.5rem;
+     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height:15vh;
+}
+
+.pingimage {
+    flex: 0 0 auto;
+}
+
+.pingimage img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-items {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+}
+.box1 {
+  background-image: url('./samurai.jpg');
+  background-size: cover;    
+   background-repeat: no-repeat;   /* Prevents image from repeating */
+  background-position: center      
+  
+
+}
+.box3 {
+  background-image: url('./hindustan.jpg');
+  background-size: cover;    
+   background-repeat: no-repeat;   /* Prevents image from repeating */
+  background-position: center      
+  
+}
+.box{
+  color:white;
+}
+.top{
+
+  color:white;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.index {
+    color: rgb(24, 22, 22);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    transform: translateX(0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+}
+
+.nav-items:hover .index {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+.index:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.header:hover {
+    background-color: rgb(236, 42, 87);
+    transition: background-color 0.3s ease;
+}
+.name {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.2px;
+    margin-left: 0px;
+}
+@media (max-width:800px){
+    .header{
+         display: flex;
+         flex-direction: column;
+    background-color: rgb(86, 245, 86);
+    width: 100%;
+    padding: 1rem 2rem;
+    align-items: center;
+        gap: 1.5rem;
+    }
+}
+   @media (max-width: 560px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 0;
+  }
+
+  .index {
+    width: 100%;
+    text-align: center;
+  }
+}
+main{
+  padding-top: 100px;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  grid-template-rows: auto auto; /* two rows */
+  gap: 20px;
+  padding: 20px;
+}
+
+.box1 {
+  grid-row-start: 1;/* spans both rows */
+  grid-row-end: 3;
+}
+
+.box2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.box3 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.box {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+.lcimage {
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  margin-right: 12px; /* spacing between image and link */
+}
+
+.leet {
+  display: flex;
+  align-items: center;  /* vertical alignment */
+  margin-bottom: 10px;  /* spacing below the whole row */
+}
+
+.lc-link {
+  display: inline-block;
+  margin-bottom: 10px;  /* pushes "LEETCODE" text a bit down */
+  text-decoration: none;
+  font-weight: bold;
+  color: #000; /* or any color you prefer */
+}
+.readme{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  row-gap: 90px;
+
+}
+.quote{
+  color:rgb(255, 255, 255);
+  font-weight: 500;
+}
+.grid2{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows:repeat(2,1fr);
+  gap: 20px;
+  padding: 20px;
+}
+/* now i want to add transition of background color change  */
+.box1{
+  background-color: #ffe44a;
+}
+.box2{
+  background-color:#2a9cd5
+}
+.box3{
+  background-color: rgb(196, 40, 81);
+}
+.top{
+  margin-top: 50px;
+}
+.box1:hover {
+  box-shadow: 0px 10px 20px #e49999; 
+}
+.box2:hover{
+  box-shadow: 0px 10px 15px #95ecff
+}
+.box3:hover{
+   box-shadow: 0px 10px 15px #f9944c
+}
+
+.box2{
+perspective: 1000px;;
+}
+.box3{
+perspective: 1000px;
+}
+.card2{
+    background-image: url('./tree.jpg');
+  background-size: cover;    
+   background-repeat: no-repeat;   /* Prevents image from repeating */
+  background-position: center  
+}
+.leet {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+.leet:hover {
+  transform: translateZ(30px) scale(1.05) translateY(20px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(219, 200, 166);
+  border-radius: 10px;
+}
+.foot{
+    display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  grid-template-rows: auto auto; /* two rows */
+  gap: 20px;
+  padding: 20px;
+}
+.card3{
+  grid-row:2;
+  grid-column: 2;
+}
+.card1{
+  grid-row-start: 1;
+  grid-column:1;
+  grid-row-end: 3;
+}
+.card2{
+  grid-row: 1;
+  grid-column: 2;
+}
+.form_1{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.form_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Adds spacing between fields */
+}
+
+.form_1 input,
+.form_1 textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form_1 button {
+  padding: 0.75rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form_1 button:hover {
+  background-color: #0056b3;
+}
+.card1{
+  background-color: #e49999;
+}
+.card2{
+  background-color: rgb(19, 183, 139);
+}
+.card3{
+  background-color: #c10fa7;
+}
+.fill{
+ font-size: 30px;
+}
+.card{
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.card3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card1:hover {
+  box-shadow: 0px 10px 15px #e49999; 
+}
+.card2:hover{
+  box-shadow: 0px 10px 15px #95ecff
+}
+.card3:hover{
+   box-shadow: 0px 10px 15px #f9944c
+}
+body {
+  background-image: url('./back.avif');
+  background-size: cover;         /* Ensures the image covers the entire screen */
+  background-repeat: no-repeat;   /* Prevents image from repeating */
+  background-position: center;    /* Centers the image */
+  min-height: 100vh;              /* Ensures body takes full height of the viewport */
+  margin: 0;                      /* Removes default margin */
+}
+.box2{
+  background-image: url('./japanese.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.b1{
+  font-weight: bold;
+  font-size: 40px;
+  color:rgb(16, 158, 120);
+}
+.texty {
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 40px;
+  background-color: #e49999;
+  border-radius: 50px;
+}
+.header{
+  background-image: url('./banner-1756639_1280.jpg');
+   background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.j1{
+  color:white
+}
+.box1 {
+  perspective: 1000px;
+}
+.top {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in-out;
+}
+.top:hover{
+    transform: translateZ(30px) scale(1.05);
+}
+
